@@ -40,11 +40,12 @@ function createDiv(className) {
 function hoverTile(e) {
   let bgColor = e.currentTarget.style.backgroundColor;
   if (bgColor === "") {
-    e.currentTarget.style.backgroundColor = randomRGB();
+    e.currentTarget.style.backgroundColor = randomHSL();
+    console.log(e.currentTarget.style.backgroundColor);
   }
 }
 
-function randomRGB() {
+function randomHSL() {
   function random(num) {
     return Math.floor(Math.random() * (num + 1));
   }
