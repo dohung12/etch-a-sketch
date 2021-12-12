@@ -38,5 +38,12 @@ function createDiv(className) {
 }
 
 function hoverTile(e) {
-  e.currentTarget.style.backgroundColor = "black";
+  e.currentTarget.style.backgroundColor = randomRGB();
+}
+
+function randomRGB() {
+  function random(num) {
+    return Math.floor(Math.random() * (num + 1));
+  }
+  return `rgb(${random(255)},${random(255)},${random(255)})`;
 }
