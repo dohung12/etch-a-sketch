@@ -3,6 +3,7 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
+  border: 10px dashed black;
 }
 
 .tile-container {
@@ -15,6 +16,6 @@
 
 .tile {
   flex: 1;
-  background-color: lightblue;
+  background-color: white;
   display: inline-block;
 }
