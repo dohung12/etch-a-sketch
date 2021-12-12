@@ -4,6 +4,7 @@ const tileMatrix = document.querySelector(".tile-matrix");
 
 //EVENT LISTENER
 document.addEventListener("DOMContentLoaded", createDivMatrix);
+
 // FUNCTIONS
 function createDivMatrix() {
   for (let i = 0; i < divMatrix; i++) {
@@ -11,6 +12,7 @@ function createDivMatrix() {
     for (let j = 0; j < divMatrix; j++) {
       let tile = createDiv("tile");
       tileContainer.appendChild(tile);
+      tile.addEventListener("mouseover", hoverTile);
     }
     tileMatrix.appendChild(tileContainer);
   }
@@ -21,4 +23,8 @@ function createDiv(className) {
   let div = document.createElement("div");
   div.classList.add(className);
   return div;
+}
+
+function hoverTile(e) {
+  e.currentTarget.style.backgroundColor = "black";
 }
